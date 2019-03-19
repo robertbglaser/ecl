@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import logo from './logo.svg';
 import inputData from './goodData';
 
 import './App.css';
@@ -15,8 +14,7 @@ class App extends Component {
 
   componentDidMount(){
 
-    this.setState({scoreData:inputData});
-
+      this.setState({scoreData:inputData});
   }
    
 
@@ -32,26 +30,18 @@ class App extends Component {
     });
     }
 
-   // var stringExtractedData = JSON.stringify(extractedData);
+
     var sortedData = extractedData.sort(function(a, b){
-      console.log("in the sort")
       return a.score-b.score
     
     });
-    console.log("after the sort",  sortedData)
-    /*var sortedData = stringExtractedData.sort(function(obj1, obj2) {
-      // Ascending: first age less than the previous
-      return obj2.score - obj1.score;
-      
-  }); */
 
-  
-
-  
+    var finalData = JSON.stringify(sortedData)
+   console.log(finalData)
+   
     
 
-   
-    return (
+return (
       <div className="App">
        
       </div>
